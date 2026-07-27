@@ -1,0 +1,488 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#175f4a">
+  <meta name="description" content="Prototype UI/UX VitaDesa untuk aplikasi warga, kiosk IoT, serta dashboard admin dan UMKM.">
+  <title>VitaDesa — Prototype Ekosistem</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23175f4a'/%3E%3Cpath d='M17 18h10l5 21 5-21h10L37 48H27z' fill='%23f7e9bd'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#prototype-stage">Lewati ke prototype</a>
+
+  <header class="site-header">
+    <a class="brand" href="#" aria-label="VitaDesa beranda prototype">
+      <span class="brand-mark" aria-hidden="true"><i></i><b></b></span>
+      <span><strong>VitaDesa</strong><small>Sehat warga, tumbuh bersama</small></span>
+    </a>
+    <div class="header-copy">
+      <span class="eyebrow">THE ACE 2026 • UI/UX COMPETITION</span>
+      <p>Prototype ekosistem layanan vitamin lokal, kiosk publik, dan pemberdayaan UMKM.</p>
+    </div>
+    <button class="btn btn-ghost btn-compact" id="reset-demo" type="button">Reset demo</button>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div>
+        <span class="status-pill"><i aria-hidden="true"></i> Prototype interaktif • data simulasi</span>
+        <h1>Satu ekosistem untuk kebiasaan sehat dan ekonomi lokal.</h1>
+        <p>Jelajahi pengalaman warga, alur pengambilan di kiosk, serta monitoring stok dan layanan publik—semuanya terhubung dalam satu prototype.</p>
+      </div>
+      <div class="hero-note">
+        <span class="note-icon" aria-hidden="true">i</span>
+        <p><strong>Bukan alat diagnosis.</strong> Sensor hanya mensimulasikan skrining dasar. Dosis pada prototype merupakan paket baku yang dikonfigurasi tenaga kesehatan.</p>
+      </div>
+    </section>
+
+    <nav class="touchpoint-tabs" aria-label="Pilih touchpoint">
+      <button class="touchpoint-tab is-active" type="button" data-touchpoint="mobile" aria-pressed="true">
+        <span class="tab-symbol" aria-hidden="true">▯</span>
+        <span><strong>Aplikasi Warga</strong><small>Mobile app</small></span>
+      </button>
+      <button class="touchpoint-tab" type="button" data-touchpoint="kiosk" aria-pressed="false">
+        <span class="tab-symbol" aria-hidden="true">▣</span>
+        <span><strong>Kiosk IoT</strong><small>Stasiun publik</small></span>
+      </button>
+      <button class="touchpoint-tab" type="button" data-touchpoint="admin" aria-pressed="false">
+        <span class="tab-symbol" aria-hidden="true">▤</span>
+        <span><strong>Admin & UMKM</strong><small>Web dashboard</small></span>
+      </button>
+    </nav>
+
+    <section class="prototype-stage" id="prototype-stage" aria-live="polite">
+      <section class="touchpoint-panel is-active" id="mobile-panel" data-panel="mobile">
+        <div class="stage-info">
+          <span class="eyebrow">Citizen mobile app</span>
+          <h2>Pendamping gizi harian yang terasa ringan.</h2>
+          <p>Warga memantau progress, terhubung ke kiosk, mengumpulkan poin, dan menemukan produk herbal UMKM yang telah dikurasi.</p>
+          <div class="feature-list">
+            <span>Tracker harian</span><span>QR handoff</span><span>Voucher UMKM</span><span>Profil keluarga</span>
+          </div>
+          <div class="screen-jump">
+            <label for="mobile-screen-select">Lompat ke layar</label>
+            <select id="mobile-screen-select">
+              <option value="splash">Splash</option>
+              <option value="onboarding">Onboarding</option>
+              <option value="auth">Login / Register</option>
+              <option value="home">Home Dashboard</option>
+              <option value="scan">QR Kiosk</option>
+              <option value="pickup">Panduan Pengambilan</option>
+              <option value="vouchers">Voucher Hub</option>
+              <option value="product">Detail Herbal</option>
+              <option value="history">History & Analytics</option>
+              <option value="notifications">Notifikasi</option>
+              <option value="profile">Profil</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="phone-shell" aria-label="Prototype aplikasi warga">
+          <div class="phone-speaker" aria-hidden="true"></div>
+          <div class="phone-status"><span>09:41</span><span>● ◒ ▰</span></div>
+          <div class="phone-screen">
+            <section class="mobile-view is-active splash-view" data-mobile-screen="splash">
+              <div class="splash-orbit" aria-hidden="true"><span></span><i></i><b></b></div>
+              <div class="splash-brand">
+                <span class="brand-mark brand-mark-large" aria-hidden="true"><i></i><b></b></span>
+                <h2>VitaDesa</h2>
+                <p>Sehat warga, tumbuh bersama.</p>
+              </div>
+              <button class="btn btn-light btn-block" type="button" data-mobile-go="onboarding">Mulai Jelajahi</button>
+            </section>
+
+            <section class="mobile-view onboarding-view" data-mobile-screen="onboarding">
+              <button class="text-button onboarding-skip" type="button" data-mobile-go="auth">Lewati</button>
+              <div class="onboarding-art" aria-hidden="true">
+                <div class="art-kiosk"><span></span><i></i></div>
+                <div class="art-person"><span></span><i></i></div>
+                <div class="art-leaf one"></div><div class="art-leaf two"></div>
+              </div>
+              <div class="onboarding-copy">
+                <span class="mini-label">01 • AKSES DEKAT</span>
+                <h2>Vitamin terukur, lebih dekat dari rumah.</h2>
+                <p>Ambil paket yang sudah dikonfigurasi petugas melalui stasiun VitaDesa di Balai Desa atau Posyandu.</p>
+              </div>
+              <div class="pagination-dots" aria-label="Slide 1 dari 3"><i class="active"></i><i></i><i></i></div>
+              <button class="btn btn-primary btn-block" type="button" id="onboarding-next">Lanjut</button>
+            </section>
+
+            <section class="mobile-view auth-view" data-mobile-screen="auth">
+              <div class="mobile-top-brand">
+                <span class="brand-mark" aria-hidden="true"><i></i><b></b></span>
+                <strong>VitaDesa</strong>
+              </div>
+              <div class="auth-copy">
+                <span class="mini-label">SELAMAT DATANG</span>
+                <h2>Mulai kebiasaan sehatmu.</h2>
+                <p>Masuk untuk melihat tracker dan jadwal pengambilan hari ini.</p>
+              </div>
+              <form id="login-form">
+                <label>Nomor HP
+                  <span class="input-wrap"><span>+62</span><input type="tel" value="812 3456 7890" aria-label="Nomor HP"></span>
+                </label>
+                <label>PIN
+                  <input type="password" value="123456" aria-label="PIN">
+                </label>
+                <button class="btn btn-primary btn-block" type="submit">Masuk</button>
+              </form>
+              <div class="auth-divider"><span>atau</span></div>
+              <button class="btn btn-outline btn-block" type="button" data-mobile-go="home">Daftar akun keluarga</button>
+              <p class="micro-copy">Dengan melanjutkan, Anda menyetujui penggunaan data simulasi pada prototype ini.</p>
+            </section>
+
+            <section class="mobile-view app-view" data-mobile-screen="home">
+              <header class="mobile-appbar">
+                <div><span class="mini-label">SELAMAT PAGI</span><h2>Halo, Rani!</h2></div>
+                <button class="avatar-button" type="button" data-mobile-go="profile" aria-label="Buka profil">RS</button>
+              </header>
+              <div class="home-scroll">
+                <article class="pickup-card">
+                  <div><span class="card-label">JADWAL HARI INI</span><h3>Paket Imun Harian</h3><p>Posyandu Melati • sampai 16.00</p></div>
+                  <div class="time-chip"><strong>10:30</strong><span>WIB</span></div>
+                  <button class="btn btn-light btn-small" type="button" data-mobile-go="scan">Ambil di kiosk <span>→</span></button>
+                </article>
+
+                <div class="section-heading"><div><h3>Progress nutrisi</h3><p>Senin, 27 Juli</p></div><button class="text-button" type="button" data-mobile-go="history">Detail</button></div>
+                <div class="nutrient-grid">
+                  <article class="nutrient-card nutrient-c">
+                    <div class="progress-ring" style="--progress:78"><span><strong id="vitamin-c-value">78</strong><small>%</small></span></div>
+                    <h4>Vitamin C</h4><p>59 dari 75 mg</p>
+                  </article>
+                  <article class="nutrient-card nutrient-d">
+                    <div class="progress-ring" style="--progress:62"><span><strong id="vitamin-d-value">62</strong><small>%</small></span></div>
+                    <h4>Vitamin D</h4><p>9 dari 15 mcg</p>
+                  </article>
+                  <article class="nutrient-card nutrient-fe">
+                    <div class="progress-ring" style="--progress:55"><span><strong id="iron-value">55</strong><small>%</small></span></div>
+                    <h4>Zat besi</h4><p>10 dari 18 mg</p>
+                  </article>
+                </div>
+
+                <div class="points-banner">
+                  <span class="points-symbol" aria-hidden="true">V</span>
+                  <div><span>Poin Vita</span><strong><b data-points-value>340</b> poin</strong></div>
+                  <button class="circle-button" type="button" data-mobile-go="vouchers" aria-label="Buka voucher">→</button>
+                </div>
+
+                <div class="section-heading"><div><h3>Untuk keluarga</h3><p>Ringkasan profil terhubung</p></div></div>
+                <article class="family-card">
+                  <div class="family-avatar">AK</div><div><strong>Arga • 8 tahun</strong><span>Jadwal berikutnya Jumat</span></div><span class="safe-chip">Terpantau</span>
+                </article>
+              </div>
+              <nav class="mobile-nav" aria-label="Navigasi aplikasi warga">
+                <button class="is-active" type="button" data-mobile-go="home"><span>⌂</span>Beranda</button>
+                <button type="button" data-mobile-go="vouchers"><span>◇</span>Voucher</button>
+                <button class="nav-scan" type="button" data-mobile-go="scan" aria-label="Pindai QR"><span>⌗</span></button>
+                <button type="button" data-mobile-go="history"><span>▥</span>Riwayat</button>
+                <button type="button" data-mobile-go="notifications"><span>○</span>Info</button>
+              </nav>
+            </section>
+
+            <section class="mobile-view app-view" data-mobile-screen="scan">
+              <header class="mobile-simplebar"><button class="back-button" type="button" data-mobile-go="home" aria-label="Kembali">←</button><h2>Pindai Kiosk</h2><button class="text-button" type="button">Bantuan</button></header>
+              <div class="scanner">
+                <div class="camera-sim"><div class="scan-frame"><span></span><i></i><b></b><em></em><div class="scan-line"></div></div><div class="camera-noise"></div></div>
+                <h3>Arahkan ke QR pada kiosk</h3>
+                <p>Pastikan seluruh kode berada di dalam bingkai dan pencahayaan cukup.</p>
+                <button class="btn btn-primary btn-block" type="button" id="simulate-mobile-scan">Simulasikan scan</button>
+                <button class="text-button" type="button">Masukkan kode manual</button>
+              </div>
+            </section>
+
+            <section class="mobile-view app-view" data-mobile-screen="pickup">
+              <header class="mobile-simplebar"><button class="back-button" type="button" data-mobile-go="home" aria-label="Kembali">←</button><h2>Panduan Pengambilan</h2><span></span></header>
+              <div class="pickup-guide">
+                <div class="success-orbit" aria-hidden="true">✓</div>
+                <span class="safe-chip">Kiosk terhubung</span>
+                <h3>Posyandu Melati</h3><p>Kiosk #VD-021 • Paket Imun Harian</p>
+                <ol class="steps">
+                  <li class="done"><span>1</span><div><strong>QR terverifikasi</strong><p>Profil keluarga ditemukan.</p></div></li>
+                  <li class="active"><span>2</span><div><strong>Ikuti instruksi kiosk</strong><p>Lanjutkan skrining dan konfirmasi paket pada layar besar.</p></div></li>
+                  <li><span>3</span><div><strong>Ambil gelas</strong><p>Tunggu indikator hijau sebelum mengambil.</p></div></li>
+                </ol>
+                <div class="notice-box"><strong>Perlu bantuan?</strong><p>Tekan tombol bantuan pada kiosk untuk memanggil petugas Posyandu.</p></div>
+                <button class="btn btn-outline btn-block" type="button" data-mobile-go="home">Kembali ke beranda</button>
+              </div>
+            </section>
+
+            <section class="mobile-view app-view" data-mobile-screen="vouchers">
+              <header class="mobile-appbar voucher-appbar"><div><span class="mini-label">UMKM LOKAL</span><h2>Voucher Hub</h2></div><div class="points-chip"><b data-points-value>340</b><span>poin</span></div></header>
+              <div class="voucher-scroll">
+                <div class="search-box"><span aria-hidden="true">⌕</span><input type="search" placeholder="Cari produk herbal" aria-label="Cari produk herbal"></div>
+                <div class="category-row"><button class="active" type="button">Semua</button><button type="button">Minuman</button><button type="button">Herbal</button><button type="button">Pangan</button></div>
+                <article class="featured-voucher">
+                  <div class="product-visual turmeric"><span></span><i></i><b></b></div>
+                  <div><span class="card-label">PILIHAN WARGA</span><h3>Kunyit Asam Segar</h3><p>UMKM Sari Bumi</p><strong>120 poin</strong></div>
+                  <button class="circle-button" type="button" data-mobile-go="product" aria-label="Lihat detail">→</button>
+                </article>
+                <div class="section-heading"><div><h3>Rekomendasi lokal</h3><p>Produk terkurasi di sekitar Anda</p></div></div>
+                <div class="product-list">
+                  <button type="button" data-mobile-go="product"><span class="product-thumb green">T</span><span><strong>Teh Telang</strong><small>Langit Herbals</small></span><b>90 pt</b></button>
+                  <button type="button" data-mobile-go="product"><span class="product-thumb amber">J</span><span><strong>Jahe Rempah</strong><small>Waras Bersama</small></span><b>110 pt</b></button>
+                  <button type="button" data-mobile-go="product"><span class="product-thumb red">R</span><span><strong>Rosella Madu</strong><small>Kebun Ibu</small></span><b>130 pt</b></button>
+                </div>
+              </div>
+              <nav class="mobile-nav" aria-label="Navigasi aplikasi warga">
+                <button type="button" data-mobile-go="home"><span>⌂</span>Beranda</button><button class="is-active" type="button" data-mobile-go="vouchers"><span>◇</span>Voucher</button><button class="nav-scan" type="button" data-mobile-go="scan" aria-label="Pindai QR"><span>⌗</span></button><button type="button" data-mobile-go="history"><span>▥</span>Riwayat</button><button type="button" data-mobile-go="notifications"><span>○</span>Info</button>
+              </nav>
+            </section>
+
+            <section class="mobile-view app-view" data-mobile-screen="product">
+              <div class="product-hero">
+                <button class="back-button floating" type="button" data-mobile-go="vouchers" aria-label="Kembali">←</button>
+                <span class="product-badge">BPOM • DATA DEMO</span>
+                <div class="bottle-art" aria-hidden="true"><span>VitaLokal</span><b>Kunyit<br>Asam</b><i></i></div>
+                <div class="leaf leaf-a"></div><div class="leaf leaf-b"></div>
+              </div>
+              <div class="product-detail">
+                <div class="seller-line"><span class="seller-logo">SB</span><div><small>Diproduksi oleh</small><strong>UMKM Sari Bumi</strong></div><span class="verified">✓</span></div>
+                <h2>Kunyit Asam Segar</h2>
+                <div class="rating">★ 4,9 <span>• 128 klaim</span></div>
+                <p>Minuman herbal lokal dengan rasa asam segar. Informasi manfaat pada prototype bersifat demonstrasi dan tidak menggantikan saran tenaga kesehatan.</p>
+                <div class="product-facts"><span><small>Isi</small><strong>250 ml</strong></span><span><small>Berlaku</small><strong>14 hari</strong></span><span><small>Poin</small><strong>120</strong></span></div>
+                <button class="btn btn-primary btn-block" type="button" id="claim-voucher">Klaim dengan 120 poin</button>
+              </div>
+            </section>
+
+            <section class="mobile-view app-view" data-mobile-screen="history">
+              <header class="mobile-appbar"><div><span class="mini-label">AKTIVITAS SAYA</span><h2>Riwayat & Analitik</h2></div><button class="icon-button" type="button" aria-label="Unduh laporan">↓</button></header>
+              <div class="history-scroll">
+                <div class="segmented"><button class="active" type="button" data-history-mode="week">Mingguan</button><button type="button" data-history-mode="month">Bulanan</button></div>
+                <article class="chart-card">
+                  <div class="chart-heading"><div><span>Konsistensi konsumsi</span><strong id="consistency-value">86%</strong></div><span class="trend-chip">↑ 12%</span></div>
+                  <canvas id="history-chart" width="340" height="190" aria-label="Grafik konsumsi vitamin"></canvas>
+                  <div class="chart-legend"><span><i class="green-dot"></i>Terpenuhi</span><span><i class="amber-dot"></i>Terlewat</span></div>
+                </article>
+                <h3 class="list-title">Aktivitas terbaru</h3>
+                <div class="timeline">
+                  <article><span class="timeline-icon">✓</span><div><strong>Paket Imun Harian</strong><p>Posyandu Melati • Hari ini, 10.42</p></div><b>+20 pt</b></article>
+                  <article><span class="timeline-icon amber">◇</span><div><strong>Voucher Kunyit Asam</strong><p>UMKM Sari Bumi • 25 Jul</p></div><b>−120 pt</b></article>
+                  <article><span class="timeline-icon">✓</span><div><strong>Paket Zat Besi</strong><p>Balai Desa Sukamaju • 23 Jul</p></div><b>+20 pt</b></article>
+                </div>
+              </div>
+              <nav class="mobile-nav" aria-label="Navigasi aplikasi warga">
+                <button type="button" data-mobile-go="home"><span>⌂</span>Beranda</button><button type="button" data-mobile-go="vouchers"><span>◇</span>Voucher</button><button class="nav-scan" type="button" data-mobile-go="scan" aria-label="Pindai QR"><span>⌗</span></button><button class="is-active" type="button" data-mobile-go="history"><span>▥</span>Riwayat</button><button type="button" data-mobile-go="notifications"><span>○</span>Info</button>
+              </nav>
+            </section>
+
+            <section class="mobile-view app-view" data-mobile-screen="notifications">
+              <header class="mobile-simplebar"><button class="back-button" type="button" data-mobile-go="home" aria-label="Kembali">←</button><h2>Notifikasi</h2><button class="text-button" type="button" id="mark-read">Baca semua</button></header>
+              <div class="notification-list">
+                <article class="unread"><span class="notification-icon green">V</span><div><strong>Jadwal pengambilan hari ini</strong><p>Paket Imun Harian tersedia di Posyandu Melati sampai pukul 16.00.</p><small>10 menit lalu</small></div><i></i></article>
+                <article class="unread"><span class="notification-icon amber">◇</span><div><strong>Poinmu bertambah!</strong><p>Kamu mendapatkan 20 poin dari pengambilan terakhir.</p><small>1 jam lalu</small></div><i></i></article>
+                <article><span class="notification-icon blue">i</span><div><strong>Stok kiosk diperbarui</strong><p>Jahe Rempah kembali tersedia di Balai Desa Sukamaju.</p><small>Kemarin</small></div></article>
+                <article><span class="notification-icon green">✓</span><div><strong>Laporan mingguan siap</strong><p>Konsistensi kebiasaan sehatmu meningkat 12% minggu ini.</p><small>2 hari lalu</small></div></article>
+              </div>
+            </section>
+
+            <section class="mobile-view app-view" data-mobile-screen="profile">
+              <header class="mobile-simplebar"><button class="back-button" type="button" data-mobile-go="home" aria-label="Kembali">←</button><h2>Profil</h2><button class="icon-button" type="button" aria-label="Pengaturan">⚙</button></header>
+              <div class="profile-scroll">
+                <div class="profile-identity"><div class="profile-avatar">RS</div><div><h3>Rani Setiawati</h3><p>ID Warga • VD-140982</p><span class="safe-chip">Profil terverifikasi</span></div></div>
+                <h3 class="list-title">Profil keluarga</h3>
+                <div class="family-list">
+                  <button type="button"><span class="family-avatar">AK</span><span><strong>Arga Kurnia</strong><small>Anak • 8 tahun</small></span><b>›</b></button>
+                  <button type="button"><span class="family-avatar rose">MS</span><span><strong>Maya Sari</strong><small>Ibu • 62 tahun</small></span><b>›</b></button>
+                  <button class="add-family" type="button"><span>+</span><strong>Tambah anggota keluarga</strong></button>
+                </div>
+                <h3 class="list-title">Akun & privasi</h3>
+                <div class="settings-list">
+                  <button type="button"><span>▣</span><strong>Data kesehatan & persetujuan</strong><b>›</b></button>
+                  <button type="button"><span>◉</span><strong>Aksesibilitas</strong><b>›</b></button>
+                  <button type="button"><span>?</span><strong>Pusat bantuan</strong><b>›</b></button>
+                </div>
+                <button class="btn btn-danger-soft btn-block" type="button" data-mobile-go="auth">Keluar</button>
+              </div>
+            </section>
+          </div>
+        </div>
+      </section>
+
+      <section class="touchpoint-panel" id="kiosk-panel" data-panel="kiosk">
+        <div class="stage-info kiosk-stage-info">
+          <span class="eyebrow">Kiosk IoT screen</span>
+          <h2>Alur publik yang besar, jelas, dan aman.</h2>
+          <p>Interaksi minim teks dengan bantuan audio, kontras tinggi, serta keputusan penting yang selalu dikonfirmasi pengguna.</p>
+          <div class="accessibility-controls" aria-label="Kontrol aksesibilitas kiosk">
+            <button type="button" id="kiosk-text-size"><span>Aa</span> Teks besar</button>
+            <button type="button" id="kiosk-contrast"><span>◐</span> Kontras</button>
+            <button type="button" id="kiosk-audio"><span>◖</span> Panduan suara</button>
+          </div>
+          <div class="screen-jump">
+            <label for="kiosk-screen-select">Lompat ke langkah</label>
+            <select id="kiosk-screen-select">
+              <option value="welcome">Selamat Datang</option><option value="scan">Scan QR/Kartu</option><option value="consent">Persetujuan</option><option value="sensor">Panduan Sensor</option><option value="result">Hasil Skrining</option><option value="dispense">Dispensing</option><option value="complete">Selesai</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="kiosk-shell" aria-label="Prototype layar kiosk">
+          <div class="kiosk-camera" aria-hidden="true"></div>
+          <div class="kiosk-screen">
+            <div class="kiosk-topbar"><div class="kiosk-brand"><span class="brand-mark"><i></i><b></b></span><strong>VitaDesa</strong></div><span>Posyandu Melati • Kiosk VD-021</span><button type="button" class="kiosk-help">? Bantuan</button></div>
+
+            <section class="kiosk-view is-active kiosk-welcome" data-kiosk-screen="welcome">
+              <div class="kiosk-welcome-art" aria-hidden="true"><div class="big-leaf"></div><div class="cup"><span></span></div><i></i><b></b></div>
+              <div><span class="kiosk-eyebrow">STASIUN VITAMIN LOKAL</span><h2>Halo! Siap mulai<br>kebiasaan sehat?</h2><p>Siapkan aplikasi VitaDesa atau kartu warga Anda.</p><button class="kiosk-primary" type="button" data-kiosk-go="scan">Mulai Pengambilan <span>→</span></button><small>Tekan tombol untuk memulai • Data pada layar ini adalah simulasi</small></div>
+            </section>
+
+            <section class="kiosk-view kiosk-scan" data-kiosk-screen="scan">
+              <div class="kiosk-step-label">LANGKAH 1 DARI 4</div><h2>Hubungkan profil Anda</h2><p>Pindai QR dari aplikasi atau tempelkan kartu warga pada area pembaca.</p>
+              <div class="scan-options"><div class="qr-panel"><div class="qr-art" aria-hidden="true"><i></i><i></i><i></i><i></i><span></span></div><strong>Pindai QR aplikasi</strong><small>Buka menu “Pindai Kiosk”</small></div><div class="option-or">atau</div><div class="card-panel"><div class="card-art" aria-hidden="true"><span>VD</span><i></i></div><strong>Tempel kartu warga</strong><small>Tahan selama 2 detik</small></div></div>
+              <button class="kiosk-secondary" type="button" id="simulate-kiosk-scan">Simulasikan profil terbaca</button>
+            </section>
+
+            <section class="kiosk-view kiosk-consent" data-kiosk-screen="consent">
+              <div class="kiosk-step-label">LANGKAH 2 DARI 4</div>
+              <div class="consent-layout"><div class="consent-profile"><div class="kiosk-avatar">RS</div><span>Profil ditemukan</span><h2>Rani Setiawati</h2><p>Paket hari ini: <strong>Imun Harian</strong></p><div class="family-note">Untuk profil keluarga, pastikan pengguna yang dipilih sudah benar di aplikasi.</div></div><div class="consent-copy"><h3>Sebelum melanjutkan</h3><ul><li><span>✓</span>Sensor hanya membaca indikator dasar dan bukan alat diagnosis.</li><li><span>✓</span>Paket menggunakan konfigurasi baku dari petugas layanan.</li><li><span>✓</span>Data demo ini tidak dikirim ke sistem nyata.</li></ul><label class="consent-check"><input type="checkbox" id="consent-checkbox"><span>Saya memahami dan menyetujui proses simulasi skrining.</span></label><button class="kiosk-primary" type="button" id="consent-next" disabled>Lanjutkan <span>→</span></button></div></div>
+            </section>
+
+            <section class="kiosk-view kiosk-sensor" data-kiosk-screen="sensor">
+              <div class="kiosk-step-label">LANGKAH 3 DARI 4</div><h2>Letakkan jari pada sensor</h2><p>Gunakan jari telunjuk, tekan ringan, dan diam selama proses berlangsung.</p>
+              <div class="sensor-layout"><div class="hand-art" aria-hidden="true"><div class="finger"></div><div class="palm"></div><div class="sensor-glow"></div></div><div class="sensor-status"><div class="pulse-line" aria-hidden="true"><span></span></div><strong id="sensor-status-title">Sensor siap digunakan</strong><p id="sensor-status-copy">Tekan tombol di bawah untuk memulai simulasi pembacaan.</p><button class="kiosk-primary" type="button" id="start-sensor">Mulai pembacaan</button></div></div>
+            </section>
+
+            <section class="kiosk-view kiosk-result" data-kiosk-screen="result">
+              <div class="kiosk-step-label">HASIL SKRINING DASAR</div>
+              <div class="result-layout"><div class="result-summary"><span class="result-check">✓</span><h2>Indikator dasar stabil</h2><p>Hasil ini tidak mendiagnosis status vitamin atau penyakit.</p><div class="vital-row"><span><small>Denyut nadi</small><strong>76 bpm</strong></span><span><small>SpO₂ simulasi</small><strong>98%</strong></span></div></div><div class="package-choice"><span class="kiosk-eyebrow">PAKET TERKONFIGURASI</span><article><div class="package-icon">C</div><div><h3>Imun Harian</h3><p>Vitamin C + minuman kunyit asam terkurasi</p><small>Konfigurasi Posyandu Melati • 1 porsi</small></div><span class="selected-check">✓</span></article><div class="warning-strip"><strong>Perhatian:</strong> Laporkan alergi atau keluhan kepada petugas sebelum melanjutkan.</div><button class="kiosk-primary" type="button" data-kiosk-go="dispense">Konfirmasi paket <span>→</span></button></div></div>
+            </section>
+
+            <section class="kiosk-view kiosk-dispense" data-kiosk-screen="dispense">
+              <div class="dispense-animation" aria-hidden="true"><div class="nozzle"><span></span></div><div class="liquid-stream"></div><div class="dispense-cup"><span></span><i></i></div><div class="dispense-ripple"></div></div>
+              <div class="dispense-copy"><span class="kiosk-eyebrow">SEDANG MENYIAPKAN</span><h2>Paket Imun Harian</h2><p>Mohon tunggu dan jangan mengambil gelas sebelum indikator berubah hijau.</p><div class="dispense-progress"><span id="dispense-bar"></span></div><strong id="dispense-percent">0%</strong><small>Dispenser dan cairan pada prototype ini adalah simulasi visual.</small></div>
+            </section>
+
+            <section class="kiosk-view kiosk-complete" data-kiosk-screen="complete">
+              <div class="complete-burst" aria-hidden="true"><span>✓</span><i></i><b></b><em></em></div><span class="kiosk-eyebrow">SELESAI</span><h2>Silakan ambil gelas Anda</h2><p>Terima kasih sudah menjaga kebiasaan sehat hari ini.</p><div class="reward-card"><span class="points-symbol">V</span><div><small>Poin Vita didapat</small><strong>+20 poin</strong></div><div><small>Streak sehat</small><strong>5 hari 🔥</strong></div></div><div class="complete-actions"><button class="kiosk-primary" type="button" data-kiosk-go="welcome">Selesai</button><button class="kiosk-secondary" type="button" id="print-summary">Cetak ringkasan</button></div>
+            </section>
+          </div>
+          <div class="kiosk-hardware" aria-hidden="true"><span></span><i></i><b></b></div>
+        </div>
+      </section>
+
+      <section class="touchpoint-panel admin-panel-wrap" id="admin-panel" data-panel="admin">
+        <div class="stage-info admin-stage-info">
+          <span class="eyebrow">Admin & UMKM web dashboard</span>
+          <h2>Satu pandangan untuk layanan, stok, dan dampak.</h2>
+          <p>Data ditampilkan secara agregat untuk operasional Posyandu, pengelolaan rantai pasok, dan pengambilan keputusan lokal.</p>
+          <div class="feature-list"><span>Inventory IoT</span><span>Auto reorder</span><span>Heatmap agregat</span><span>Audit batch</span></div>
+        </div>
+
+        <div class="admin-shell" aria-label="Prototype dashboard admin dan UMKM">
+          <aside class="admin-sidebar">
+            <div class="admin-brand"><span class="brand-mark"><i></i><b></b></span><span><strong>VitaDesa</strong><small>Admin Console</small></span></div>
+            <nav aria-label="Navigasi dashboard">
+              <button class="active" type="button" data-admin-go="overview"><span>▦</span>Ringkasan</button>
+              <button type="button" data-admin-go="inventory"><span>▤</span>Inventaris <i>2</i></button>
+              <button type="button" data-admin-go="orders"><span>◇</span>Pesanan</button>
+              <button type="button" data-admin-go="heatmap"><span>⌖</span>Health Map</button>
+            </nav>
+            <div class="admin-sidebar-bottom"><button type="button"><span>?</span>Pusat bantuan</button><div class="admin-user"><span>DN</span><div><strong>Dewi N.</strong><small>Koordinator</small></div><b>⋮</b></div></div>
+          </aside>
+          <div class="admin-main">
+            <header class="admin-topbar"><div><span class="mini-label">POSYANDU MELATI • SUKAMAJU</span><h2 id="admin-page-title">Ringkasan Layanan</h2></div><div class="admin-actions"><span class="demo-badge">DATA DEMO</span><button class="icon-button" type="button" aria-label="Notifikasi">○<i></i></button><button class="btn btn-primary btn-small" type="button" data-admin-go="inventory">+ Kelola stok</button></div></header>
+
+            <section class="admin-view is-active" data-admin-screen="overview">
+              <div class="admin-filter"><span>Terakhir diperbarui: hari ini, 10.45 WIB</span><button type="button">7 hari terakhir⌄</button></div>
+              <div class="metric-grid">
+                <article><span class="metric-icon green">✓</span><div><small>Pengambilan hari ini</small><strong>184</strong><p><b>↑ 12%</b> dari kemarin</p></div></article>
+                <article><span class="metric-icon amber">V</span><div><small>Warga aktif</small><strong>1.248</strong><p><b>+42</b> bulan ini</p></div></article>
+                <article><span class="metric-icon blue">▤</span><div><small>Kiosk aktif</small><strong>8 / 9</strong><p><i>1 perlu inspeksi</i></p></div></article>
+                <article><span class="metric-icon rose">!</span><div><small>Peringatan stok</small><strong id="alert-count">2</strong><p><i>Perlu tindakan</i></p></div></article>
+              </div>
+              <div class="admin-grid">
+                <article class="admin-card usage-chart-card">
+                  <div class="admin-card-head"><div><h3>Aktivitas pengambilan</h3><p>Jumlah porsi per hari</p></div><span class="trend-chip">↑ 8,4%</span></div>
+                  <canvas id="admin-chart" width="650" height="260" aria-label="Grafik aktivitas pengambilan"></canvas>
+                </article>
+                <article class="admin-card alert-card">
+                  <div class="admin-card-head"><div><h3>Perlu perhatian</h3><p>Prioritas operasional</p></div><button class="text-button" type="button" data-admin-go="inventory">Lihat semua</button></div>
+                  <div class="alert-list">
+                    <button type="button" data-admin-go="inventory"><span class="alert-symbol critical">!</span><span><strong>Vitamin C menipis</strong><small>Kiosk Balai Desa • 18%</small></span><b>›</b></button>
+                    <button type="button" data-admin-go="inventory"><span class="alert-symbol warning">!</span><span><strong>Jahe Rempah menipis</strong><small>Kiosk Posyandu Mawar • 26%</small></span><b>›</b></button>
+                    <button type="button"><span class="alert-symbol info">i</span><span><strong>Kiosk #VD-018 offline</strong><small>Terakhir aktif 08.20</small></span><b>›</b></button>
+                  </div>
+                </article>
+                <article class="admin-card partner-card">
+                  <div class="admin-card-head"><div><h3>Performa mitra UMKM</h3><p>Produk paling banyak dipilih</p></div><button class="text-button" type="button" data-admin-go="orders">Kelola</button></div>
+                  <div class="partner-list"><span class="rank">1</span><span class="partner-logo green">SB</span><div><strong>Sari Bumi</strong><small>Kunyit Asam • 326 porsi</small></div><b>4,9 ★</b></div>
+                  <div class="partner-list"><span class="rank">2</span><span class="partner-logo amber">WB</span><div><strong>Waras Bersama</strong><small>Jahe Rempah • 248 porsi</small></div><b>4,8 ★</b></div>
+                  <div class="partner-list"><span class="rank">3</span><span class="partner-logo blue">LH</span><div><strong>Langit Herbals</strong><small>Teh Telang • 191 porsi</small></div><b>4,7 ★</b></div>
+                </article>
+              </div>
+            </section>
+
+            <section class="admin-view" data-admin-screen="inventory">
+              <div class="inventory-toolbar"><div class="search-box"><span>⌕</span><input type="search" placeholder="Cari kiosk atau produk" aria-label="Cari inventaris"></div><button type="button">Semua lokasi⌄</button><button type="button">Status stok⌄</button></div>
+              <article class="admin-card table-card">
+                <div class="admin-card-head"><div><h3>Inventaris kiosk</h3><p>Sensor volume dan pelacakan batch • data simulasi</p></div><button class="btn btn-outline btn-small" type="button">Ekspor CSV</button></div>
+                <div class="data-table-wrap"><table><thead><tr><th>Lokasi / Kiosk</th><th>Produk</th><th>Volume</th><th>Batch & kedaluwarsa</th><th>Status</th><th>Tindakan</th></tr></thead><tbody>
+                  <tr><td><strong>Balai Desa Sukamaju</strong><small>#VD-014 • Online</small></td><td>Vitamin C Jeruk</td><td><div class="stock-meter"><span style="width:18%"></span></div><b>18%</b></td><td>VC0726-A<small>28 Agu 2026</small></td><td><span class="status critical">Kritis</span></td><td><button class="table-action reorder-button" type="button" data-item="Vitamin C Jeruk" data-location="Balai Desa Sukamaju">Pesan ulang</button></td></tr>
+                  <tr><td><strong>Posyandu Mawar</strong><small>#VD-008 • Online</small></td><td>Jahe Rempah</td><td><div class="stock-meter warning"><span style="width:26%"></span></div><b>26%</b></td><td>JR0726-B<small>14 Agu 2026</small></td><td><span class="status warning">Menipis</span></td><td><button class="table-action reorder-button" type="button" data-item="Jahe Rempah" data-location="Posyandu Mawar">Pesan ulang</button></td></tr>
+                  <tr><td><strong>Posyandu Melati</strong><small>#VD-021 • Online</small></td><td>Kunyit Asam</td><td><div class="stock-meter safe"><span style="width:72%"></span></div><b>72%</b></td><td>KA0726-D<small>20 Agu 2026</small></td><td><span class="status safe">Aman</span></td><td><button class="table-action" type="button">Detail</button></td></tr>
+                  <tr><td><strong>Puskesmas Pembantu</strong><small>#VD-002 • Online</small></td><td>Zat Besi</td><td><div class="stock-meter safe"><span style="width:64%"></span></div><b>64%</b></td><td>FE0726-C<small>15 Jan 2027</small></td><td><span class="status safe">Aman</span></td><td><button class="table-action" type="button">Detail</button></td></tr>
+                </tbody></table></div>
+              </article>
+            </section>
+
+            <section class="admin-view" data-admin-screen="orders">
+              <div class="orders-summary"><article><span>Pesanan aktif</span><strong id="active-orders">3</strong><small>2 menunggu konfirmasi</small></article><article><span>Nilai bulan ini</span><strong>Rp8,4 jt</strong><small>+14% dari Juni</small></article><article><span>Mitra aktif</span><strong>12</strong><small>4 kategori produk</small></article></div>
+              <article class="admin-card table-card"><div class="admin-card-head"><div><h3>Pesanan ke mitra UMKM</h3><p>Status pasokan dan pengiriman terkini</p></div><button class="btn btn-primary btn-small" type="button" id="new-order">+ Pesanan baru</button></div>
+                <div class="order-list" id="order-list">
+                  <article><span class="order-icon">SB</span><div><strong>#ORD-260727-018 • Sari Bumi</strong><p>48 botol Kunyit Asam • Posyandu Melati</p></div><span class="status safe">Dalam perjalanan</span><small>Estimasi 28 Jul</small><button type="button">⋮</button></article>
+                  <article><span class="order-icon amber">WB</span><div><strong>#ORD-260726-017 • Waras Bersama</strong><p>32 botol Jahe Rempah • Posyandu Mawar</p></div><span class="status warning">Diproses</span><small>Estimasi 29 Jul</small><button type="button">⋮</button></article>
+                  <article><span class="order-icon blue">DF</span><div><strong>#ORD-260724-012 • Desa Farma</strong><p>120 porsi Vitamin C • Balai Desa Sukamaju</p></div><span class="status neutral">Menunggu</span><small>Konfirmasi mitra</small><button type="button">⋮</button></article>
+                </div>
+              </article>
+            </section>
+
+            <section class="admin-view" data-admin-screen="heatmap">
+              <div class="privacy-banner"><span>⌾</span><p><strong>Data agregat & terlindungi.</strong> Peta tidak menampilkan identitas atau diagnosis individu. Area minimum agregasi: 25 profil aktif.</p></div>
+              <div class="heatmap-layout">
+                <article class="admin-card map-card"><div class="admin-card-head"><div><h3>Civic Health Heatmap</h3><p>Indeks konsistensi kebiasaan • 7 hari terakhir</p></div><select aria-label="Pilih indikator"><option>Konsistensi konsumsi</option><option>Partisipasi kiosk</option><option>Ketersediaan stok</option></select></div>
+                  <div class="village-map" aria-label="Peta agregat wilayah desa">
+                    <div class="map-road road-a"></div><div class="map-road road-b"></div><div class="map-river"></div>
+                    <button class="map-zone zone-a" type="button" style="--zone:#79bd78"><span>RW 01</span><b>88%</b></button>
+                    <button class="map-zone zone-b" type="button" style="--zone:#a8cf72"><span>RW 02</span><b>76%</b></button>
+                    <button class="map-zone zone-c" type="button" style="--zone:#f1c95f"><span>RW 03</span><b>61%</b></button>
+                    <button class="map-zone zone-d" type="button" style="--zone:#e99b68"><span>RW 04</span><b>48%</b></button>
+                    <div class="map-pin pin-a">V</div><div class="map-pin pin-b">V</div><div class="map-pin pin-c">V</div>
+                    <div class="map-legend"><span><i style="background:#e99b68"></i>Perlu dukungan</span><span><i style="background:#f1c95f"></i>Berkembang</span><span><i style="background:#79bd78"></i>Baik</span></div>
+                  </div>
+                </article>
+                <article class="admin-card insight-card"><div class="admin-card-head"><div><h3>Insight wilayah</h3><p>Rekomendasi tindakan</p></div></div>
+                  <div class="insight-score"><span>RW 04</span><strong>48%</strong><small>Konsistensi terendah</small></div>
+                  <ul><li><span>!</span><div><strong>Jarak ke kiosk lebih tinggi</strong><p>Median 1,8 km dari rumah warga aktif.</p></div></li><li><span>↗</span><div><strong>Partisipasi naik 6%</strong><p>Setelah jadwal layanan sore ditambahkan.</p></div></li><li><span>V</span><div><strong>Saran intervensi</strong><p>Tambahkan layanan kiosk keliling dua kali seminggu.</p></div></li></ul>
+                  <button class="btn btn-primary btn-block" type="button" id="create-program">Buat rencana dukungan</button>
+                </article>
+              </div>
+            </section>
+          </div>
+        </div>
+      </section>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <span>VitaDesa • Smart Local Vitamin & Fortified Herbal Station</span>
+    <span>Prototype kompetisi • Bukan alat medis • Seluruh data bersifat simulasi</span>
+  </footer>
+
+  <div class="modal-backdrop" id="modal-backdrop" hidden>
+    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+      <button class="modal-close" id="modal-close" type="button" aria-label="Tutup">×</button>
+      <span class="modal-icon" id="modal-icon">✓</span>
+      <h2 id="modal-title">Voucher berhasil diklaim</h2>
+      <p id="modal-copy">Kode voucher tersimpan pada akun Anda.</p>
+      <div class="voucher-code" id="voucher-code">VITA-SB-0726</div>
+      <button class="btn btn-primary btn-block" id="modal-action" type="button">Selesai</button>
+    </div>
+  </div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"><span>✓</span><p>Perubahan tersimpan</p></div>
+  <script src="script.js"></script>
+</body>
+</html>
