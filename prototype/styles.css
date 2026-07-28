@@ -225,8 +225,45 @@ button { color: inherit; }
 .touchpoint-tab.is-active { color: white; background: var(--forest-800); box-shadow: 0 8px 18px rgba(23, 95, 74, .21); }
 .touchpoint-tab.is-active .tab-symbol { color: var(--forest-900); background: var(--leaf-300); }
 
+.platform-banner {
+  width: min(860px, calc(100% - 32px));
+  min-height: 72px;
+  margin: 0 auto 20px;
+  padding: 12px 16px;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 13px;
+  border: 1px solid rgba(23, 95, 74, .14);
+  border-radius: 18px;
+  color: var(--forest-950);
+  background: white;
+  box-shadow: var(--shadow-sm);
+}
+.platform-icon {
+  width: 42px;
+  height: 42px;
+  display: grid;
+  place-items: center;
+  border-radius: 13px;
+  color: white;
+  background: var(--forest-800);
+  font-size: 24px;
+}
+.platform-banner div { display: grid; gap: 3px; }
+.platform-banner strong { font-size: 13px; }
+.platform-banner small { color: var(--muted); font-size: 10px; }
+.platform-size {
+  padding: 7px 10px;
+  border-radius: 999px;
+  color: var(--forest-800);
+  background: var(--leaf-100);
+  font-size: 10px;
+  font-weight: 800;
+}
+
 .prototype-stage {
-  width: min(1480px, calc(100% - 32px));
+  width: min(1120px, calc(100% - 32px));
   min-height: 900px;
   margin: 0 auto 40px;
   padding: 46px;
@@ -251,6 +288,7 @@ button { color: inherit; }
 }
 .touchpoint-panel { display: none; position: relative; z-index: 1; }
 .touchpoint-panel.is-active { display: grid; grid-template-columns: minmax(260px, .75fr) minmax(380px, 1.25fr); align-items: center; gap: 70px; animation: panel-in .35s ease; }
+.competition-out-of-scope { display: none !important; }
 @keyframes panel-in { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
 .stage-info { align-self: center; padding-left: 30px; }
 .stage-info h2 {
@@ -271,8 +309,9 @@ button { color: inherit; }
 
 /* Mobile */
 .phone-shell {
-  width: 414px;
-  height: 842px;
+  width: min(390px, 100%);
+  height: auto;
+  aspect-ratio: 390 / 844;
   margin: 0 auto;
   padding: 11px;
   border: 2px solid #20352d;
@@ -581,10 +620,10 @@ button { color: inherit; }
 @media (max-width: 780px) {
   .site-header { width: calc(100% - 20px); grid-template-columns: 1fr auto; gap: 8px; top: 5px; }.header-copy { display:none; }
   .hero { width: calc(100% - 28px); margin-top: 42px; grid-template-columns:1fr;gap:24px }.hero h1{font-size:43px;letter-spacing:-1.7px}.hero>div:first-child>p{font-size:14px}
-  .touchpoint-tabs { width: calc(100% - 20px); }.touchpoint-tab { min-height:56px;padding:7px }.touchpoint-tab span:last-child small{display:none}.touchpoint-tab strong{font-size:10px}.tab-symbol{width:28px;height:28px;font-size:16px}
+  .platform-banner { width: calc(100% - 20px); }
   .prototype-stage { width: calc(100% - 12px); padding: 25px 10px; border-radius:24px; }
   .stage-info h2 { font-size:34px }.stage-info>p{font-size:13px}
-  .phone-shell { width: min(414px,100%); height: 810px; }
+  .phone-shell { width: min(390px,100%); height: auto; }
   .kiosk-stage-info { display:block }.kiosk-stage-info .accessibility-controls{margin:18px auto;max-width:430px}.kiosk-shell{overflow-x:auto}.kiosk-screen{width:850px}
   .admin-stage-info { display:block;text-align:center }.admin-stage-info h2{font-size:34px}.admin-stage-info>p{margin:12px auto 0}.admin-shell{display:block;overflow-x:auto}.admin-sidebar{min-width:950px;height:auto;display:grid;grid-template-columns:auto 1fr auto;align-items:center}.admin-sidebar nav{display:flex}.admin-sidebar-bottom{margin:0}.admin-sidebar-bottom>button{display:none}.admin-user{margin:0;padding:0;border:0}.admin-main{min-width:950px}
   .site-footer{width:calc(100% - 28px);flex-direction:column}
@@ -592,8 +631,7 @@ button { color: inherit; }
 
 @media (max-width: 460px) {
   .site-header .brand small{display:none}.btn-compact{padding:0 10px}
-  .touchpoint-tabs{grid-template-columns:repeat(3,1fr)}.touchpoint-tab{display:grid;justify-items:center;gap:3px}.touchpoint-tab span:last-child{text-align:center}.tab-symbol{display:none}
-  .prototype-stage{border-radius:18px}.phone-shell{height:790px;border-radius:45px}.phone-status{border-radius:34px 34px 0 0}.phone-screen{border-radius:0 0 34px 34px}
+  .platform-banner{grid-template-columns:auto 1fr}.platform-size{grid-column:1/-1;text-align:center}.prototype-stage{border-radius:18px}.phone-shell{height:auto;border-radius:45px}.phone-status{border-radius:34px 34px 0 0}.phone-screen{border-radius:0 0 34px 34px}
 }
 
 @media (prefers-reduced-motion: reduce) {

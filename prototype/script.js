@@ -52,7 +52,7 @@
   function loadState() {
     try {
       const saved = JSON.parse(localStorage.getItem(STORAGE_KEY) || "{}");
-      return { ...defaultState, ...saved };
+      return { ...defaultState, ...saved, touchpoint: "mobile" };
     } catch {
       return { ...defaultState };
     }

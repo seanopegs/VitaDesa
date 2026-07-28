@@ -4,8 +4,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#175f4a">
-  <meta name="description" content="Prototype UI/UX VitaDesa untuk aplikasi warga, kiosk IoT, serta dashboard admin dan UMKM.">
-  <title>VitaDesa — Prototype Ekosistem</title>
+  <meta name="description" content="Prototype UI/UX mobile VitaDesa untuk akses vitamin lokal, pemantauan kebiasaan sehat, dan voucher UMKM.">
+  <title>VitaDesa — Prototype Mobile</title>
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23175f4a'/%3E%3Cpath d='M17 18h10l5 21 5-21h10L37 48H27z' fill='%23f7e9bd'/%3E%3C/svg%3E">
   <link rel="stylesheet" href="styles.css">
 </head>
@@ -19,7 +19,7 @@
     </a>
     <div class="header-copy">
       <span class="eyebrow">THE ACE 2026 • UI/UX COMPETITION</span>
-      <p>Prototype ekosistem layanan vitamin lokal, kiosk publik, dan pemberdayaan UMKM.</p>
+      <p>Prototype mobile layanan vitamin lokal dan pemberdayaan UMKM.</p>
     </div>
     <button class="btn btn-ghost btn-compact" id="reset-demo" type="button">Reset demo</button>
   </header>
@@ -27,39 +27,30 @@
   <main>
     <section class="hero">
       <div>
-        <span class="status-pill"><i aria-hidden="true"></i> Prototype interaktif • data simulasi</span>
-        <h1>Satu ekosistem untuk kebiasaan sehat dan ekonomi lokal.</h1>
-        <p>Jelajahi pengalaman warga, alur pengambilan di kiosk, serta monitoring stok dan layanan publik—semuanya terhubung dalam satu prototype.</p>
+        <span class="status-pill"><i aria-hidden="true"></i> Mobile portrait • data simulasi</span>
+        <h1>Kebiasaan sehat dan UMKM lokal dalam satu aplikasi.</h1>
+        <p>Jelajahi alur warga dari onboarding, pemantauan vitamin, koneksi QR ke stasiun layanan, hingga penukaran poin dengan produk UMKM lokal.</p>
       </div>
       <div class="hero-note">
         <span class="note-icon" aria-hidden="true">i</span>
-        <p><strong>Bukan alat diagnosis.</strong> Sensor hanya mensimulasikan skrining dasar. Dosis pada prototype merupakan paket baku yang dikonfigurasi tenaga kesehatan.</p>
+        <p><strong>Ruang lingkup kompetisi: mobile.</strong> Stasiun layanan hanya menjadi konteks alur fisik; seluruh antarmuka yang dirancang dan dinilai berada di aplikasi warga.</p>
       </div>
     </section>
 
-    <nav class="touchpoint-tabs" aria-label="Pilih touchpoint">
-      <button class="touchpoint-tab is-active" type="button" data-touchpoint="mobile" aria-pressed="true">
-        <span class="tab-symbol" aria-hidden="true">▯</span>
-        <span><strong>Aplikasi Warga</strong><small>Mobile app</small></span>
-      </button>
-      <button class="touchpoint-tab" type="button" data-touchpoint="kiosk" aria-pressed="false">
-        <span class="tab-symbol" aria-hidden="true">▣</span>
-        <span><strong>Kiosk IoT</strong><small>Stasiun publik</small></span>
-      </button>
-      <button class="touchpoint-tab" type="button" data-touchpoint="admin" aria-pressed="false">
-        <span class="tab-symbol" aria-hidden="true">▤</span>
-        <span><strong>Admin & UMKM</strong><small>Web dashboard</small></span>
-      </button>
-    </nav>
+    <div class="platform-banner" aria-label="Ruang lingkup platform">
+      <span class="platform-icon" aria-hidden="true">▯</span>
+      <div><strong>Citizen Mobile App</strong><small>Satu platform sesuai Ketentuan Lomba THE ACE 2026</small></div>
+      <span class="platform-size">390 × 844 • portrait</span>
+    </div>
 
     <section class="prototype-stage" id="prototype-stage" aria-live="polite">
       <section class="touchpoint-panel is-active" id="mobile-panel" data-panel="mobile">
         <div class="stage-info">
-          <span class="eyebrow">Citizen mobile app</span>
-          <h2>Pendamping gizi harian yang terasa ringan.</h2>
+          <span class="eyebrow">Mobile-only case study</span>
+          <h2>Pendamping gizi harian dalam genggaman.</h2>
           <p>Warga memantau progress, terhubung ke kiosk, mengumpulkan poin, dan menemukan produk herbal UMKM yang telah dikurasi.</p>
           <div class="feature-list">
-            <span>Tracker harian</span><span>QR handoff</span><span>Voucher UMKM</span><span>Profil keluarga</span>
+            <span>11 layar mobile</span><span>Tracker harian</span><span>QR handoff</span><span>Voucher UMKM</span><span>Profil keluarga</span>
           </div>
           <div class="screen-jump">
             <label for="mobile-screen-select">Lompat ke layar</label>
@@ -301,7 +292,7 @@
         </div>
       </section>
 
-      <section class="touchpoint-panel" id="kiosk-panel" data-panel="kiosk">
+      <section class="touchpoint-panel competition-out-of-scope" id="kiosk-panel" data-panel="kiosk" aria-hidden="true">
         <div class="stage-info kiosk-stage-info">
           <span class="eyebrow">Kiosk IoT screen</span>
           <h2>Alur publik yang besar, jelas, dan aman.</h2>
@@ -363,7 +354,7 @@
         </div>
       </section>
 
-      <section class="touchpoint-panel admin-panel-wrap" id="admin-panel" data-panel="admin">
+      <section class="touchpoint-panel admin-panel-wrap competition-out-of-scope" id="admin-panel" data-panel="admin" aria-hidden="true">
         <div class="stage-info admin-stage-info">
           <span class="eyebrow">Admin & UMKM web dashboard</span>
           <h2>Satu pandangan untuk layanan, stok, dan dampak.</h2>
@@ -467,8 +458,8 @@
   </main>
 
   <footer class="site-footer">
-    <span>VitaDesa • Smart Local Vitamin & Fortified Herbal Station</span>
-    <span>Prototype kompetisi • Bukan alat medis • Seluruh data bersifat simulasi</span>
+    <span>VitaDesa • Citizen Mobile App</span>
+    <span>Prototype kompetisi • Mobile-only • Bukan alat medis • Seluruh data bersifat simulasi</span>
   </footer>
 
   <div class="modal-backdrop" id="modal-backdrop" hidden>
